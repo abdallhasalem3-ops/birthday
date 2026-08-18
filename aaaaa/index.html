@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>عيد ميلاد سعيد 🎂</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial;
+            background: linear-gradient(135deg, #ffb6c1, #ffd1dc, #fff);
+            text-align: center;
+            overflow-x: hidden;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        h1 {
+            color: #ff1493;
+            font-size: 40px;
+        }
+
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 600px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+        }
+
+        img {
+            width: 200px;
+            height: 200px;
+            border-radius: 20px;
+            object-fit: cover;
+            margin: 10px;
+        }
+
+        button {
+            background: #ff1493;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            border-radius: 20px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        #message {
+            display: none;
+            font-size: 22px;
+            color: #444;
+            margin-top: 20px;
+        }
+
+        #countdown {
+            font-size: 30px;
+            color: #d63384;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>عيد ميلاد سعيد ي بنووووتي ي حبيبه بابا🎂</h1>
+
+        <div class="card">
+            <h2> كل سنة وانتي طيبة ي بابا💖</h2>
+            <p>يارب تكون سنة سعيده عليكي ي اجمل بنووته ف الدنيااا🤍</p>
+        </div>
+
+        <div class="card">
+            <h2>⏳ العد التنازلي</h2>
+            <div id="countdown"></div>
+        </div>
+
+        <div class="card">
+            <h2>📸 الذكريات</h2>
+
+            <!-- حط صوركم هنا -->
+            <img src="c:\Users\as141\OneDrive\Documenten\abdullah.html\New folder\photo_2026-08-17_18-33-47.jpg">
+            <img src="c:\Users\as141\OneDrive\Documenten\abdullah.html\New folder\photo_2026-08-17_18-33-39.jpg">
+            <img src="c:\Users\as141\OneDrive\Documenten\abdullah.html\New folder\photo_2026-08-17_18-33-18.jpg">
+            <video width="300" controls height="250"
+                src="c:\Users\as141\OneDrive\Documenten\abdullah.html\New folder\IMG_1602.MOV"></video>
+            <video width="300" controls height="250"
+                src="c:\Users\as141\OneDrive\Documenten\abdullah.html\New folder\IMG_0885.MOV"></video>
+        </div>
+
+        <div class="card">
+            <button onclick="showMessage()">اضغطي هنا للمفاجأة 🎁</button>
+
+            <div id="message">
+                💌<br><br>
+                فيرووووز بنووووتي كملت 20 سنه احلي من يتم العشيين كداا كداا يعني زي النهارده اتولدت احلي واحن واطيب
+                بنوووته ف الكووون كلله
+                انا مش عارف اقول اي ولا اي ي بابا بس حقيقي انتي احسن انسانه عرفتها ف حياتي وم هلاقي زيك ابدا ابدا ابدا
+                كل سنه وانتي طيبه
+                ي اميييرتي وبنوووته وبابا وماما وكل حاجه ف حياتي كل سنه وانتي اسعد انسانه ف الدنياا كل سنه وانتي
+                معاياا امممم قربنا ع السنتين سواا ي بابا بقيتي اغلي حاجه ف حياتي ف الفتره دي بقي ليكي مكانه خاصه لوحدك
+                كداا ومعامله خاصه وحب خاص لوعد بس خلصت عليكي كل الحلويات م لاقي حاجه جديده كل سنه وانتي طيبه ي اميرتي
+                وعيد سعيد عليكي يرب وعقبال سنين حلوه كتير وانا معاكي وتكوني مبسوطه وفي احسن حال ي باااابااااا ي احلي
+                حاجه
+                حصلتلي ف حياااااااااااااتي
+                Happy Birthday BaBa🤍✨
+            </div>
+        </div>
+
+    </div>
+
+    <script>
+        function showMessage() {
+            document.getElementById("message").style.display = "block";
+        }
+
+        let birthday = new Date("Aug 20, 2026 00:00:00").getTime();
+
+        setInterval(function () {
+            let now = new Date().getTime();
+            let distance = birthday - now;
+
+            let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            let hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+
+            document.getElementById("countdown").innerHTML =
+                days + " يوم و " + hours + " ساعة";
+        }, 1000);
+    </script>
+</body>
+
+</html>
